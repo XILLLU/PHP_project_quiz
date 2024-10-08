@@ -1,0 +1,510 @@
+
+/*  COLORS
+    background-color:#dffdff;
+    contrast: #7d84b
+    main color: #8fa6cb;
+
+
+*/
+*{
+    margin :0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:  'Roboto', sans-serif; 
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color:#777;
+
+    padding: 30px;
+    background-color: #fff;  
+}
+
+.header{
+    height: 95vh;
+    background-image: 
+                    linear-gradient(to right , 
+                    rgba(143, 166, 203, 0.799),rgba(5, 13, 87, 0.804)), 
+                    url(../projekt_quiz/img/background.jpg);
+    background-size: cover;
+    background-position: top;
+    
+    clip-path: polygon(0 0, 100% 0, 100% 75vh , 0 100% );
+
+    position: relative;
+}
+footer{
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 30px;
+  padding-right: 60px;
+  width: 100%;
+
+  font-family:  'Roboto', sans-serif; ;
+
+  font-size: 25px;
+
+  text-align: right;
+}
+.text-wrapper{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-65%,-100%);
+}
+
+.heading-primary{
+    color:#fff ;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+
+}
+.heading-primary-main{
+    display: block;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 20px;
+
+    animation: moveInLeft;
+    animation-duration: 2s;
+
+    
+}
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 5px;
+
+    animation: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+/*animations*/
+ @keyframes moveInLeft{
+    0%{ 
+        opacity: 0;
+        transform: translateX(-100px);
+
+    }
+
+    80%{
+        opacity: 0.5;
+        transform: translateX(10px);
+    }
+
+    100%{
+        opacity:1;
+        transform: translate(0);
+    }
+ }
+ 
+ @keyframes moveInRight{
+    0%{ 
+        opacity: 0;
+        transform: translateX(100px);
+
+    }
+
+    80%{
+        opacity: 0.5;
+        transform: translateX(-10px);
+    }
+
+    100%{
+        opacity:1;
+        transform: translate(0);
+    }
+ }
+
+.button-wrapper{
+    position: absolute;
+    top: 60%;
+    left: 75%;
+
+    animation: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+
+} 
+
+.button{
+    background-color:#7d84b2;
+    font-size: 30px;
+    color:#fff;
+    letter-spacing: 5px;
+    font-weight: 100;
+    
+    border-radius: 100px;
+    width: 350px;
+    height: 80px;
+    text-transform: uppercase;
+
+    border: none;
+
+    transition: all .5s ease-in-out;
+
+    box-shadow: 0px 15px 20px, rgba(0,0,0,0.2);
+
+   
+}
+.button:hover{
+    transform: scale(1.1) ;
+    cursor: pointer;
+    background-color: #05a95c;
+}
+
+.gear-container1{
+    position: absolute;
+    top:15%;
+    left: 79%;
+
+}
+.gear-container{
+    position: absolute;
+    top: -4%;
+    left: 85.1%;
+}
+
+
+
+
+.gear-wrapper1{
+    display: flex;
+    height: 500px;
+
+    animation: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+  }
+  
+  .gear1{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background:#05a95c ;
+    border-radius: 50%;
+    animation-name: spin1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  .gear1 .center1{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(5, 13, 87, 0.804);
+    border-radius: 50%;
+  }
+  
+  .tooth1{
+    position: absolute;
+    top: -25px;
+    left: 75px;
+    z-index: 1;
+    width: 45px;
+    height: 250px;
+    background:#05a95c;
+    
+  }
+  
+  .tooth1:nth-child(2){
+    transform: rotate(45deg);
+    
+  }
+  
+  .tooth1:nth-child(3){
+    transform: rotate(90deg);
+    
+  }
+  
+  .tooth1:nth-child(4){
+    transform: rotate(135deg);
+    
+  }
+  
+  @keyframes spin1 {
+    from {transform: rotate(360deg); }
+    to {transform: rotate(0deg);}
+  }
+  
+  
+  .gear-wrapper{
+    left: 79.6%;
+    top: -7%;
+    display: flex;
+    height: 500px;
+    animation: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+  }
+  
+  .gear{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background:#05a95c ;
+    border-radius: 50%;
+    animation-name: spin;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  .gear .center{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(5, 13, 87, 0.804);
+    border-radius: 50%;
+  }
+  
+  .tooth{
+    position: absolute;
+    top: -25px;
+    left: 75px;
+    z-index: 1;
+    width: 45px;
+    height: 250px;
+    background:#05a95c;
+    
+  }
+  
+  .tooth:nth-child(2){
+    transform: rotate(45deg);
+    
+  }
+  
+  .tooth:nth-child(3){
+    transform: rotate(90deg);
+    
+  }
+  
+  .tooth:nth-child(4){
+    transform: rotate(135deg);
+    
+  }
+  @keyframes spin {
+    from {transform: rotate(-360deg); }
+    to {transform: rotate(0deg);}
+  }
+  .owijacz{
+    position: absolute;
+    top:15%;
+    left:80%;
+
+    display: flex;
+    gap:10px;
+
+  }
+
+  .card-wrapper{
+    height: 95vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: row;
+    gap:100px;
+
+    margin-top: 50px;
+    
+  }
+  .card{
+    height: 600px;
+    width: 400px;
+
+    border-radius: 30px ;
+    border: #7d84b2 2px solid;
+
+    transition: all .5s ease-in-out;
+  }
+
+  .card:hover{
+    transform: scale(1.1);
+    cursor:pointer;
+
+    animation: hideCard;
+    animation-duration: 1000s;
+    animation-timing-function: linear;
+  }
+  /*animations*/
+  @keyframes hideCard {
+    0%{
+      opacity: 1;
+
+    }
+    100%{
+      opacity: 0;
+    }
+    
+  }
+  @keyframes showText {
+   1%{
+    opacity: 0;
+   }
+   2%{
+    opacity: 1;
+   }
+   20%{
+    opacity: 1;
+   }
+   30%{
+    opacity: 1;
+   }
+   40%{
+    opacity: 1;
+   }
+   50%{
+    opacity: 1;
+   }
+   60%{
+    opacity: 1;
+   }
+   70%{
+    opacity: 1;
+   }
+   80%{
+    opacity: 1;
+   }
+   90%{
+    opacity: 1;
+   }
+   100%{
+    opacity: 1;
+   }
+    
+  }
+  .text{
+   opacity: 0;
+   color:white;
+   
+    margin-top: 100px;
+    height: 100%;
+    width: 100%;
+
+
+   border-radius: 30px;
+
+   text-align: center;
+   padding-top: 100px;
+
+   font-size: 50px;
+   letter-spacing: 2px;
+
+
+  }
+
+  .text:hover{
+    animation: showText;
+    animation-duration: 50s;
+    animation-timing-function: ease-out;
+  }
+  .card ::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+
+    
+
+    color:black;
+  }
+
+  .card::after:hover{
+    animation: showText;
+    animation-duration: 2s;
+    
+  }
+
+ .quiz{
+  background-image: 
+    linear-gradient(to right , 
+    rgba(143, 166, 203, 0.799),rgba(5, 13, 87, 0.804)), 
+    url(../projekt_quiz/img/test-quiz.jpg);
+    background-size: cover;
+ }
+ .lecture{
+  background-image: 
+    linear-gradient(to right , 
+    rgba(143, 166, 203, 0.799),rgba(5, 13, 87, 0.804)), 
+    url(../projekt_quiz/img/book.jpg);
+    background-size: cover;
+  
+ }
+
+
+ .links-section{
+  color:#777;
+  font-size: 20px;
+
+  text-decoration:none;
+
+
+  position: absolute;
+  left: 44%;
+  
+ }
+.links-section:hover{
+  cursor: pointer;
+}
+
+a.title{
+  text-decoration: none;
+  color: #fff;
+
+}
+.title-heading{
+  margin-top: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 60px;
+
+  color:#777;
+}
+/*animations*/
+
+@keyframes textAppear{
+  0%{
+    opacity: 0;
+    transform: translateZ(-100px);
+  }
+
+  80%{
+    transform: translateZ(10px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateZ(0px);
+  }
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+a:link{
+  color: #fff;
+  text-decoration: none;
+}
+
+.starter{
+  color:#777;
+}
